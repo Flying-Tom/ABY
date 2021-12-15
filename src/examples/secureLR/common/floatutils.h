@@ -1,8 +1,10 @@
-#include "../../abycore/aby/abyparty.h"
-#include "../../abycore/circuit/arithmeticcircuits.h"
-#include "../../abycore/circuit/booleancircuits.h"
-#include "../../abycore/circuit/circuit.h"
-#include "../../abycore/sharing/sharing.h"
+#ifndef FLOATUTILS_H
+#define FLOATUTILS_H
+#include "../../../abycore/aby/abyparty.h"
+#include "../../../abycore/circuit/arithmeticcircuits.h"
+#include "../../../abycore/circuit/booleancircuits.h"
+#include "../../../abycore/circuit/circuit.h"
+#include "../../../abycore/sharing/sharing.h"
 #include <iostream>
 
 inline static e_mt_gen_alg mt_alg = MT_OT;
@@ -100,3 +102,5 @@ inline void float_array_add(e_role role, const std::string& address, uint16_t po
         }
     }
 }
+
+#endif

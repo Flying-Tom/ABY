@@ -1,5 +1,5 @@
-#include "common.h"
-#include "float_utils.h"
+#include "common/floatutils.h"
+#include "common/secureLR.h"
 
 extern "C" {
 double loss_first_computation(e_role role, uint32_t nvals, double input[])

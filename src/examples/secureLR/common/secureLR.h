@@ -1,5 +1,5 @@
-#ifndef COMMON_H
-#define COMMON_H
+#ifndef SECURELR_H
+#define SECURELR_H
 #include <ENCRYPTO_utils/crypto/crypto.h>
 #include <ENCRYPTO_utils/parse_options.h>
 #include <cassert>
