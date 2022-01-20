@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
+SET(CMAKE_C_COMPILER "/usr/bin/clang")
+SET(CMAKE_CXX_COMPILER "/usr/bin/clang")
 project(ABY LANGUAGES CXX)
 
 add_compile_options("-fPIC")
@@ -65,6 +67,6 @@ add_subdirectory(src/abycore)
 
 
 if(ABY_BUILD_EXE)
-    add_subdirectory(src/test)
+    # add_subdirectory(src/test)
     add_subdirectory(src/examples)
 endif(ABY_BUILD_EXE)

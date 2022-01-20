@@ -28,7 +28,7 @@ inline double float_inner_product(e_role role, const std::string& address, uint1
     uint64_t* out_vals_mul;
 
     while (true) {
-        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, "ABY/bin/circ/");
+        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, "ABYLR/ABY/bin/circ/");
 
         std::vector<Sharing*>& sharings = party->GetSharings();
 
@@ -76,7 +76,7 @@ inline void float_array_add(e_role role, const std::string& address, uint16_t po
     uint64_t* out_vals_add;
 
     while (true) {
-        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, "ABY/bin/circ/");
+        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, "ABYLR/ABY/bin/circ/");
 
         std::vector<Sharing*>& sharings = party->GetSharings();
 
