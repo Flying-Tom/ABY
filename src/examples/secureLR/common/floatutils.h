@@ -9,6 +9,8 @@
 
 inline static e_mt_gen_alg mt_alg = MT_OT;
 
+inline static const std::string abycircdir = "lib/bin/circ/";
+
 inline double float_inner_product(e_role role, const std::string& address, uint16_t port, seclvl seclvl,
     uint32_t nvals, uint32_t bitlen, uint32_t nthreads, e_mt_gen_alg mt_alg,
     e_sharing sharing, double input[])
@@ -28,7 +30,7 @@ inline double float_inner_product(e_role role, const std::string& address, uint1
     uint64_t* out_vals_mul;
 
     while (true) {
-        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, "ABYLR/ABY/bin/circ/");
+        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, abycircdir);
 
         std::vector<Sharing*>& sharings = party->GetSharings();
 
@@ -76,7 +78,7 @@ inline void float_array_add(e_role role, const std::string& address, uint16_t po
     uint64_t* out_vals_add;
 
     while (true) {
-        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, "ABYLR/ABY/bin/circ/");
+        ABYParty* party = new ABYParty(role, address, port, seclvl, bitlen, nthreads, mt_alg, 65536, abycircdir);
 
         std::vector<Sharing*>& sharings = party->GetSharings();
 
