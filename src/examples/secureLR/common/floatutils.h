@@ -1,12 +1,12 @@
 #ifndef FLOATUTILS_H
 #define FLOATUTILS_H
-#include <iostream>
 
 #include "../../../abycore/aby/abyparty.h"
 #include "../../../abycore/circuit/arithmeticcircuits.h"
 #include "../../../abycore/circuit/booleancircuits.h"
 #include "../../../abycore/circuit/circuit.h"
 #include "../../../abycore/sharing/sharing.h"
+#include "secureLR.h"
 
 inline static e_mt_gen_alg mt_alg = MT_OT;
 
@@ -52,7 +52,7 @@ inline double float_inner_product(e_role role, const std::string& address,
     if (out_vals_mul[0] == 0) {
       break;
     } else {
-      // std::cerr << "recompute " << std::endl;
+      WARNING("float_inner_product checkbit fault, recompute\n");
     }
   }
   double result = 0;
@@ -102,7 +102,7 @@ inline void float_array_add(e_role role, const std::string& address,
     if (out_vals_add[0] == 0) {
       break;
     } else {
-      // std::cerr << "recompute " << std::endl;
+      WARNING("float_array_add checkbit fault, recompute\n");
     }
   }
   for (int i = 0; i < nvals; i++) {
