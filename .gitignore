@@ -29,4 +29,3 @@ CTestTestfile.cmake
 
 # VS Code Directory
 .vscode/
-!build/lib/
